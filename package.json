@@ -5,8 +5,10 @@
   "type": "commonjs",
   "main": "src/main/index.js",
   "scripts": {
+    "license": "license-checker --production --json --out license.json",
+    "lint": "eslint src",
     "start": "node src/main/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint"
   },
   "bin": {
     "bitnode-bees": "src/main/index.js"
@@ -33,5 +35,9 @@
   "homepage": "https://github.com/Awayume/bitnode-bees#readme",
   "engines": {
     "node": ">=18.x"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "license-checker": "^8.0.1"
   }
 }
