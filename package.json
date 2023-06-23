@@ -1,0 +1,37 @@
+{
+  "name": "bitnode-bees",
+  "version": "0.1.0",
+  "description": "DNS Seeder for various cryptocurrencies",
+  "type": "commonjs",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "node src/main/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bitnode-bees": "src/main/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Awayume/bitnode-bees.git"
+  },
+  "keywords": [
+    "address",
+    "cryptocurrency",
+    "dns",
+    "dns-seeder",
+    "network",
+    "p2p",
+    "peer",
+    "peer-to-peer"
+  ],
+  "author": "Awayume <dev@awayume.jp>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Awayume/bitnode-bees/issues"
+  },
+  "homepage": "https://github.com/Awayume/bitnode-bees#readme",
+  "engines": {
+    "node": ">=18.x"
+  }
+}
