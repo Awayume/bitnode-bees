@@ -1,7 +1,7 @@
 {
   "name": "bitnode-bees",
   "version": "0.1.0",
-  "description": "DNS Seeder for various cryptocurrencies",
+  "description": "DNS Seeder for various crypto currency servers",
   "type": "commonjs",
   "main": "src/main/index.js",
   "scripts": {
