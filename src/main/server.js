@@ -1,14 +1,18 @@
 // SPDX-FileCopyrightText: 2023 Awayume <dev@awayume.jp>
 // SPDX-License-Identifier: APGL-3.0-only
 
+'use strict';
+
 const dgram = require('node:dgram');
 const net = require('node:net');
 
 const { addIndent } = require('./utils/strings');
 
 /**
+ * @typedef {import('node:buffer').Buffer} Buffer
  * @typedef {dgram.Socket} UDPSocket
  * @typedef {net.Server} TCPServer
+ * @typedef {net.Socket} TCPSocket
  */
 
 
