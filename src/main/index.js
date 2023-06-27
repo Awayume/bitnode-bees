@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Awayume <dev@awayume.jp>
-// SPDX-License-Identifier: APGL-3.0-only
+// SPDX-License-Identifier: APGL-3.0-only
 
 'use strict';
 
@@ -41,4 +41,4 @@ try {
 } catch(e) {
   console.error('An unexpected error occured:\n' + addIndent(e.stack, 2));
   process.exit(255);
-};
+}

@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Awayume <dev@awayume.jp>
-// SPDX-License-Identifier: APGL-3.0-only
+// SPDX-License-Identifier: APGL-3.0-only
 
 /**
  * Add indents to string.
@@ -15,4 +15,4 @@ exports.addIndent = (text, depth) => {
     return str.slice(0, -1);
   })('');
   return i_text;
-};
+}

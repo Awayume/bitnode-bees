@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Awayume <dev@awayume.jp>
-// SPDX-License-Identifier: APGL-3.0-only
+// SPDX-License-Identifier: APGL-3.0-only
 
 'use strict';
 
@@ -55,7 +55,7 @@ exports.Server = class {
     this._udp_socket.on('message', this._on_udp_message.bind(this));
     this._tcp_server.on('error', this._on_tcp_error.bind(this));
     this._tcp_server.on('listening', this._on_tcp_listening.bind(this));
-  };
+  }
 
   /**
    * An error handler for UDP socket.
@@ -63,7 +63,7 @@ exports.Server = class {
    */
   async _on_udp_error(err) {
     console.error('A UDP connection error occured:\n' + addIndent(err.stack, 2));
-  };
+  }
 
   /**
    * An event handler for UDP port listening.
@@ -71,7 +71,7 @@ exports.Server = class {
   async _on_udp_listening() {
     const address = this._udp_socket.address();
     console.log(`UDP server listening on port ${address.port}.`);
-  };
+  }
 
   /**
    * An event handler for UDP message.
@@ -80,7 +80,7 @@ exports.Server = class {
    */
   async _on_udp_message(msg, rinfo) {
     console.log(`A message received from UDP connection: \n${msg}\n${rinfo}`);
-  };
+  }
 
   /**
    * An error handler for TCP server.
@@ -88,7 +88,7 @@ exports.Server = class {
    */
   async _on_tcp_error(err) {
     console.error('A TCP connection error occured:\n' + addIndent(err.stack, 2));
-  };
+  }
 
   /**
    * An event handler for TCP port listening.
@@ -96,7 +96,7 @@ exports.Server = class {
   async _on_tcp_listening() {
     const address = this._tcp_server.address();
     console.log(`TCP server listening on port ${address.port}.`);
-  };
+  }
 
   /**
    * An event handler for TCP data.
@@ -104,7 +104,7 @@ exports.Server = class {
    */
   async _tcp_data_handler(data) {
     console.log('A data received from TCP connection: \n' + data);
-  };
+  }
 
   /**
    * An error handler for TCP socket.
@@ -112,7 +112,7 @@ exports.Server = class {
    */
   async _tcp_socket_error_handler(err) {
     console.error('A TCP socket error occured:\n' + addIndent(err.stack, 2));
-  };
+  }
 
   /**
    * An event handler for TCP socket.
@@ -121,7 +121,7 @@ exports.Server = class {
   async _tcp_socket_handler(socket) {
     socket.on('data', this._tcp_data_handler.bind(this));
     socket.on('error', this._tcp_socket_error_handler.bind(this))
-  };
+  }
 
   /**
    * Run the DNS server.
@@ -130,7 +130,7 @@ exports.Server = class {
     this._udp_socket.bind(this._port);
     this._tcp_server.listen(this._port);
     console.info('The DNS server started successfully.');
-  };
+  }
 
   /**
    * Close the DNS server.
@@ -140,4 +140,4 @@ exports.Server = class {
     this._tcp_server.close();
     console.info('The DNS server stopped successfully.');
   }
-};
+}
